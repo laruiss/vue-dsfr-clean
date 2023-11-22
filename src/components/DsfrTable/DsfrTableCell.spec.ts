@@ -14,7 +14,7 @@ describe('DsfrTableCell', () => {
     // When
     const { container } = render(DsfrTableCell, {
       global: {
-        component: {
+        components: {
           VIcon,
         },
       },
