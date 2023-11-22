@@ -3,7 +3,8 @@ import { computed, watch, onMounted } from 'vue'
 
 import { getRandomId } from '../../utils/random-utils'
 import DsfrNavigationMenuItem from './DsfrNavigationMenuItem.vue'
-import DsfrNavigationMenuLink, { DsfrNavigationMenuLinkProps } from './DsfrNavigationMenuLink.vue'
+import DsfrNavigationMenuLink from './DsfrNavigationMenuLink.vue'
+import type { DsfrNavigationMenuLinkProps } from './DsfrNavigationMenuLink.vue'
 import { useCollapsable } from '../../composables'
 
 const {

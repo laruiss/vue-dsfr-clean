@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { type DsfrButtonProps } from '../DsfrButton/DsfrButton.vue'
+import type { DsfrButtonProps } from '../DsfrButton/DsfrButton.vue'
 import DsfrButtonGroup from '../DsfrButton/DsfrButtonGroup.vue'
 
 withDefaults(defineProps<{

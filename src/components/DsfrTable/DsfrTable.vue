@@ -2,7 +2,7 @@
 import { computed, ref, watch } from 'vue'
 import DsfrTableRow, { type DsfrTableRowProps } from './DsfrTableRow.vue'
 import DsfrTableHeaders from './DsfrTableHeaders.vue'
-import { type DsfrTableHeadersProps } from './DsfrTableHeaders.vue'
+import type { DsfrTableHeadersProps } from './DsfrTableHeaders.vue'
 
 const props = withDefaults(defineProps<{
   title: string

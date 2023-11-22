@@ -1,9 +1,9 @@
-import { resolve, dirname } from "node:path";
-import { fileURLToPath, URL } from "node:url";
+import { fileURLToPath, URL } from 'url'
+import { dirname, resolve } from 'path'
 
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import vueJsx from "@vitejs/plugin-vue-jsx";
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
 const projectDir = dirname(new URL(import.meta.url).pathname);
 
@@ -17,20 +17,20 @@ export default defineConfig({
   },
   build: {
     lib: {
-      name: "vue-dsfr",
-      entry: resolve(projectDir, "src", "index.ts"),
+      name: 'vue-dsfr',
+      entry: resolve(projectDir, 'src', 'index.ts'),
     },
     rollupOptions: {
-      external: ["vue", "oh-vue-icons", "vue-router"],
+      external: ['vue', 'oh-vue-icons', 'vue-router'],
       output: {
-        exports: "named",
-        dir: "dist",
+        exports: 'named',
+        dir: 'dist',
         globals: {
-          vue: "Vue",
-          "oh-vue-icons": "OhVueIcon",
+          vue: 'Vue',
+          'oh-vue-icons': 'OhVueIcon',
         },
-        assetFileNames: (v) => "vue-dsfr" + v.name?.replace(/[^.]+\./, "."),
+        assetFileNames: (v) => 'vue-dsfr' + v.name?.replace(/[^.]+\./, '.'),
       },
     },
   },
-});
+})

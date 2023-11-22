@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { TdHTMLAttributes, computed } from 'vue'
+import { computed } from 'vue'
+import type { TdHTMLAttributes } from 'vue'
 
 export type DsfrTableCellProps = {
   field: string | Record<string, unknown>

@@ -1,13 +1,16 @@
 <script lang="ts" setup>
-import { ref, onMounted, onUnmounted, Ref } from 'vue'
-import { RouteLocationRaw } from 'vue-router'
+import { ref, onMounted, onUnmounted } from 'vue'
+import type { RouteLocationRaw } from 'vue-router'
 
 import { getRandomId } from '../../utils/random-utils'
 
 import DsfrNavigationItem from './DsfrNavigationItem.vue'
-import DsfrNavigationMenuLink, { type DsfrNavigationMenuLinkProps } from './DsfrNavigationMenuLink.vue'
-import DsfrNavigationMenu, { type DsfrNavigationMenuProps } from './DsfrNavigationMenu.vue'
-import DsfrNavigationMegaMenu, { type DsfrNavigationMegaMenuProps } from './DsfrNavigationMegaMenu.vue'
+import DsfrNavigationMenuLink from './DsfrNavigationMenuLink.vue'
+import type { DsfrNavigationMenuLinkProps } from './DsfrNavigationMenuLink.vue'
+import DsfrNavigationMenu from './DsfrNavigationMenu.vue'
+import type { DsfrNavigationMenuProps } from './DsfrNavigationMenu.vue'
+import DsfrNavigationMegaMenu from './DsfrNavigationMegaMenu.vue'
+import type { DsfrNavigationMegaMenuProps } from './DsfrNavigationMegaMenu.vue'
 
 export type DsfrNavigationMenuLinks = (DsfrNavigationMenuLinkProps | DsfrNavigationMegaMenuProps | DsfrNavigationMenuProps)[]
 
@@ -29,7 +32,7 @@ const props = withDefaults(defineProps<{
   navItems: () => [],
 })
 
-const expandedMenuId: Ref<string | undefined> = ref(undefined)
+const expandedMenuId = ref<string | undefined>(undefined)
 
 const toggle = (id: string | undefined) => {
   if (id === expandedMenuId.value) {

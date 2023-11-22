@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import DsfrTile, { DsfrTileProps } from './DsfrTile.vue'
+import DsfrTile from './DsfrTile.vue'
+import type { DsfrTileProps } from './DsfrTile.vue'
 
 withDefaults(defineProps<{
   tiles?:(DsfrTileProps & { containerClass: string })[]
